@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Arena Night
+
+A high-traffic event landing page built with **Next.js 16**, **TypeScript**, and **Firebase**. Designed as a portfolio piece demonstrating SSG, real-time features, and frontend performance optimization.
+
+## Why This Project
+
+Built to demonstrate the technical skills needed for building event websites that handle massive traffic:
+
+- **Static Site Generation (SSG)** for pages that don't change — served instantly from CDN
+- **Client Components** only where interactivity is needed — countdown, voting, live results
+- **Real-time voting** with Firebase Firestore — updates across all connected clients instantly
+- **Performance-first** — Lighthouse 90+ across all categories
+
+## Tech Stack
+
+| Technology                  | Purpose                                    |
+| --------------------------- | ------------------------------------------ |
+| Next.js 16 (App Router)     | SSG, routing, server/client components     |
+| TypeScript                  | Type safety                                |
+| Tailwind CSS                | Styling                                    |
+| Firebase (Firestore + Auth) | Real-time voting, anonymous authentication |
+| Vitest + RTL                | Testing (13 tests)                         |
+| Vercel                      | Deployment with global CDN                 |
+
+## Architecture
+
+```
+SSG (Build Time)          Client (Browser)
+┌─────────────────┐      ┌──────────────────┐
+│ Landing page    │      │ Countdown timer  │
+│ Cartelera       │      │ Vote bars        │
+│ (static HTML)   │      │ Live results     │
+└─────────────────┘      │ (Firebase real-  │
+        │                │  time + polling)  │
+        ▼                └──────────────────┘
+   Served by CDN                 │
+   (instant load)                ▼
+                          Firebase Firestore
+                          (real-time sync)
+```
+
+**Why this split?** Content that doesn't change (fight cards, hero) is pre-rendered at build time as static HTML — a CDN serves it instantly to millions of users without hitting a server. Interactive features (countdown, voting, live scores) run as client components with minimal JavaScript.
+
+## Features
+
+- **Hero with countdown** — Pure client-side timer, no backend needed
+- **Fight card grid** — SSG pre-rendered, responsive 2-column layout
+- **Real-time voting** — Firebase anonymous auth + Firestore real-time listeners
+- **Live results** — Simulated polling updates every 10 seconds
+- **Mobile responsive** — Hamburger menu, works on all screen sizes
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Clone
+git clone https://github.com/Jorgeb37/arena-night.git
+cd arena-night
+
+# Install
+npm install
+
+# Set up Firebase (create .env.local)
+cp .env.example .env.local
+# Fill in your Firebase config values
+
+# Run
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Testing
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run test        # Watch mode
+npm run test:run    # Single run (13 tests)
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Lighthouse Score
 
-## Learn More
+<!-- Add screenshot after deployment -->
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built by [Jorge Manuel Bustillos Caicedo](https://linkedin.com/in/jorge-manuel-bustillos)
