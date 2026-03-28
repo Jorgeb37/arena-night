@@ -6,7 +6,7 @@ Portfolio project: landing page for a fictional boxing + music event. Built to d
 
 ## Stack
 
-- Next.js 14 (App Router), TypeScript, Tailwind CSS
+- Next.js 16 (App Router), TypeScript, Tailwind CSS
 - Firebase (Firestore + Anonymous Auth)
 - Vitest + React Testing Library
 
