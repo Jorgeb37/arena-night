@@ -5,9 +5,23 @@ import FightCard from '@/components/FightCard';
 import type { Fight } from '@/data/types';
 
 vi.mock('next/image', () => ({
-  // eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text
   default: (props: React.ImgHTMLAttributes<HTMLImageElement>) => (
     <img {...props} />
+  ),
+}));
+
+vi.mock('next/link', () => ({
+  default: ({
+    children,
+    href,
+    ...props
+  }: {
+    children: React.ReactNode;
+    href: string;
+  } & React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
+    <a href={href} {...props}>
+      {children}
+    </a>
   ),
 }));
 
@@ -42,5 +56,11 @@ describe('FightCard', () => {
   it('renders VS separator', () => {
     render(<FightCard fight={mockFight} />);
     expect(screen.getByText('VS')).toBeInTheDocument();
+  });
+
+  it('links to fight detail page', () => {
+    render(<FightCard fight={mockFight} />);
+    const link = screen.getByRole('link');
+    expect(link).toHaveAttribute('href', '/cartelera/fight-1');
   });
 });
