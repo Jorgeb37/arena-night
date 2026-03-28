@@ -80,7 +80,7 @@ npm run test:run    # Single run (13 tests)
 
 ## Lighthouse Score
 
-<!-- Add screenshot after running Lighthouse audit -->
+![Lighthouse Score](public/lighthouse-score.jpg)
 
 ---
 
