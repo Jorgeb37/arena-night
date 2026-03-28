@@ -9,9 +9,18 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://arena-night.vercel.app'),
   title: 'Arena Night — Boxing & Music Event',
   description:
     'Arena Night is a premier boxing and music event experience. Vote for your favourite fighters and artists, check the lineup, and see live results.',
+  openGraph: {
+    siteName: 'Arena Night',
+    locale: 'es_ES',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+  },
 };
 
 export default function RootLayout({
