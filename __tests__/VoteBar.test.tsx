@@ -2,6 +2,14 @@ import { render, screen } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
 import VoteBar from '@/components/VoteBar';
 
+vi.mock('motion/react', () => ({
+  motion: {
+    div: ({ children, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
+      <div {...props}>{children}</div>
+    ),
+  },
+}));
+
 // Mock Firebase — we test UI logic, not Firebase
 vi.mock('@/lib/firebase', () => ({
   db: {},

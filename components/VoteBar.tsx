@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { doc, onSnapshot, setDoc } from 'firebase/firestore';
 import { signInAnonymously } from 'firebase/auth';
 import { db, auth } from '@/lib/firebase';
+import { motion } from 'motion/react';
 
 interface VoteBarProps {
   fightId: string;
@@ -107,13 +108,15 @@ export default function VoteBar({
         </button>
       </div>
       <div className="mb-2 flex h-4 overflow-hidden rounded-full bg-gray-800">
-        <div
-          className="bg-amber-500 transition-all duration-500"
-          style={{ width: `${pct1}%` }}
+        <motion.div
+          className="bg-amber-500"
+          animate={{ width: `${pct1}%` }}
+          transition={{ type: 'spring', stiffness: 300, damping: 30 }}
         />
-        <div
-          className="bg-gray-600 transition-all duration-500"
-          style={{ width: `${pct2}%` }}
+        <motion.div
+          className="bg-gray-600"
+          animate={{ width: `${pct2}%` }}
+          transition={{ type: 'spring', stiffness: 300, damping: 30 }}
         />
       </div>
       <div className="flex justify-between text-xs text-gray-400">
