@@ -74,9 +74,13 @@ npm run test        # Watch mode
 npm run test:run    # Single run (13 tests)
 ```
 
+## Live Demo
+
+**[arena-night.vercel.app](https://arena-night.vercel.app)**
+
 ## Lighthouse Score
 
-<!-- Add screenshot after deployment -->
+<!-- Add screenshot after running Lighthouse audit -->
 
 ---
 
