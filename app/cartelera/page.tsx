@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import FightCard from '@/components/FightCard';
+import AnimateOnScroll from '@/components/AnimateOnScroll';
 import fights from '@/data/combates.json';
 import type { Fight } from '@/data/types';
 
@@ -19,8 +20,10 @@ export default function CarteleraPage() {
         5 combates — 15 de Julio, 2026
       </p>
       <div className="grid gap-6 sm:grid-cols-2">
-        {(fights as Fight[]).map((fight) => (
-          <FightCard key={fight.id} fight={fight} />
+        {(fights as Fight[]).map((fight, index) => (
+          <AnimateOnScroll key={fight.id} delay={index * 0.08}>
+            <FightCard fight={fight} />
+          </AnimateOnScroll>
         ))}
       </div>
     </section>
