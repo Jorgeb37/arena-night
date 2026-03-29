@@ -17,7 +17,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(245,158,11,0.08)_0%,_transparent_70%)]" />
       <div className="relative z-10">
         <motion.h1
-          className="mb-2 text-6xl font-black tracking-tighter text-white sm:text-8xl"
+          className="mb-8 text-6xl font-black tracking-tighter text-white sm:text-8xl"
           initial="hidden"
           animate="visible"
           variants={fadeUp}
