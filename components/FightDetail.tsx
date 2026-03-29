@@ -20,9 +20,9 @@ export default function FightDetail({ fight }: { fight: Fight }) {
           <span>{fight.time}</span>
         </div>
 
-        <div className="flex items-center justify-between gap-6">
+        <div className="flex items-center justify-between gap-3 sm:gap-6">
           <div className="flex flex-1 flex-col items-center text-center">
-            <div className="relative mb-4 h-32 w-32 overflow-hidden rounded-full border-2 border-white/20 sm:h-40 sm:w-40">
+            <div className="relative mb-4 h-20 w-20 overflow-hidden rounded-full border-2 border-white/20 sm:h-40 sm:w-40">
               <Image
                 src={fight.fighter1.image}
                 alt={fight.fighter1.name}
@@ -44,7 +44,7 @@ export default function FightDetail({ fight }: { fight: Fight }) {
           </span>
 
           <div className="flex flex-1 flex-col items-center text-center">
-            <div className="relative mb-4 h-32 w-32 overflow-hidden rounded-full border-2 border-white/20 sm:h-40 sm:w-40">
+            <div className="relative mb-4 h-20 w-20 overflow-hidden rounded-full border-2 border-white/20 sm:h-40 sm:w-40">
               <Image
                 src={fight.fighter2.image}
                 alt={fight.fighter2.name}
