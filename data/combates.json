@@ -2,80 +2,80 @@
   {
     "id": "fight-1",
     "fighter1": {
-      "name": "El Titan",
-      "image": "/fighters/titan.svg",
-      "record": "5-1"
+      "name": "Einstein",
+      "image": "/fighters/photos/einstein.png",
+      "record": "∞-0"
     },
     "fighter2": {
-      "name": "Shadow",
-      "image": "/fighters/shadow.svg",
-      "record": "4-2"
+      "name": "Newton",
+      "image": "/fighters/photos/newton.png",
+      "record": "∞-0"
     },
-    "category": "Peso medio",
+    "category": "Peso Genio",
     "time": "21:00",
     "status": "upcoming"
   },
   {
     "id": "fight-2",
     "fighter1": {
-      "name": "Blaze",
-      "image": "/fighters/blaze.svg",
-      "record": "6-0"
+      "name": "Cleopatra",
+      "image": "/fighters/photos/cleopatra.png",
+      "record": "7-0"
     },
     "fighter2": {
-      "name": "Vortex",
-      "image": "/fighters/vortex.svg",
-      "record": "5-1"
+      "name": "Juana de Arco",
+      "image": "/fighters/photos/juana-de-arco.png",
+      "record": "6-0"
     },
-    "category": "Peso ligero",
+    "category": "Peso Leyenda",
     "time": "21:45",
     "status": "upcoming"
   },
   {
     "id": "fight-3",
     "fighter1": {
-      "name": "Iron Fox",
-      "image": "/fighters/ironfox.svg",
-      "record": "3-2"
+      "name": "Napoleon",
+      "image": "/fighters/photos/napoleon.png",
+      "record": "5-2"
     },
     "fighter2": {
-      "name": "Rayo",
-      "image": "/fighters/rayo.svg",
-      "record": "4-1"
+      "name": "Genghis Khan",
+      "image": "/fighters/photos/genghis-khan.png",
+      "record": "10-0"
     },
-    "category": "Peso welter",
+    "category": "Peso Conquistador",
     "time": "22:30",
     "status": "upcoming"
   },
   {
     "id": "fight-4",
     "fighter1": {
-      "name": "Nova",
-      "image": "/fighters/nova.svg",
-      "record": "7-0"
+      "name": "Bruce Lee",
+      "image": "/fighters/photos/bruce-lee.png",
+      "record": "9-0"
     },
     "fighter2": {
-      "name": "Kraken",
-      "image": "/fighters/kraken.svg",
-      "record": "6-1"
+      "name": "Muhammad Ali",
+      "image": "/fighters/photos/muhammad-ali.png",
+      "record": "56-5"
     },
-    "category": "Peso pesado",
+    "category": "Peso Legendario",
     "time": "23:15",
     "status": "upcoming"
   },
   {
     "id": "fight-5",
     "fighter1": {
-      "name": "Fenix",
-      "image": "/fighters/fenix.svg",
+      "name": "Tesla",
+      "image": "/fighters/photos/tesla.png",
       "record": "8-0"
     },
     "fighter2": {
-      "name": "Trueno",
-      "image": "/fighters/trueno.svg",
+      "name": "Edison",
+      "image": "/fighters/photos/edison.png",
       "record": "7-1"
     },
-    "category": "Peso superpesado",
+    "category": "Peso Electrico",
     "time": "00:00",
     "status": "upcoming"
   }
